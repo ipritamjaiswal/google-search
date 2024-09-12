@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Google Advanced Search</title>
+    </head>
+
+    <body>
+
+        <!--Header-->
+        <header class="flex-box">
+            <!--Left elements-->
+            <div class="flex-box">
+                <img src="images/google.png" alt="google" style="width:80px;">
+            </div>
+            <!--Right elements-->
+            <div class="flex-box">
+                <a href="index.html"><small>Search</small></a>
+                <button type="button" title="Google Apps" class="btn btn-secondary-hover btn-circle"><span class="material-symbols-rounded">apps</span></button>
+                <a href="https://accounts.google.com" class="btn btn-primary">Sign in</a>
+            </div>
+        </header>
+
+        <!--Main Section-->
+        <main class="adv-main">
+            <section>
+                <h3 class="adv-h3">Advanced Search</h3>
+            </section>
+            <hr>
+            <section>
+                <div class="flex-box">
+                    <div style="flex:1;">
+                        <h4>Find pages with...</h4>
+                    </div>
+                    <div style="flex:2;"></div>
+                    <div style="flex:1;"><small><strong>To do this in the search box.</strong></small></div>
+                    <div style="flex:1;"></div>
+                </div>
+
+                <div class="flex-box">
+                    <div class="col" style="flex: 1;">
+                        <label for="q">all these words:</label>
+                        <label for="epq">this exact word or phrase:</label>
+                        <label for="oq">any of these words:</label>
+                        <label for="eq">none of these words:</label>
+                    </div>
+                    <form class="col" style="flex: 2;" action="https://www.google.com/search" method="get" id="advForm">
+
+                        <input type="text" name="as_q" id="q" />
+                        <input type="text" name="as_epq" id="epq" />
+                        <input type="text" name="as_oq" id="oq" />
+                        <input type="text" name="as_eq" id="eq" />
+
+                    </form>
+                    <div class="col" style="flex:1;">
+                        <small>Type the important words: tri-colour rat terrier</small>
+                        <small>Put exact words in quotes: "rat terrier"</small>
+                        <small>Type OR between all the words you want: miniature OR standard</small>
+                        <small>Put a minus sign just before words that you don't want: -rodent, -"Jack Russell"</small>
+                    </div>
+                    <div style="flex:1;"></div>
+                </div>
+                <div class="flex-box">
+                    <div style="flex:1;"></div>
+                    <div style="flex:2;">
+                        <p style="text-align: end;"><button type="submit" class="btn btn-primary" form="advForm">Advanced Search</button></p>
+                    </div>
+                    <div style="flex:1;"></div>
+                    <div style="flex:1;"></div>
+                </div>
+            </section>
+        </main>
+
+        <!--Footer-->
+        <footer>
+            <div style="padding:10px;">
+                India
+            </div>
+            <hr>
+            <div class="flex-box" style="padding:10px;">
+                <div class="flex-box">
+                    <a href="#">Help</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                </div>
+            </div>
+
+        </footer>
+
+    </body>
+
+</html>

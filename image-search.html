@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Google Images</title>
+    </head>
+
+    <body>
+
+        <!--Header-->
+        <header class="flex-box">
+            <!--Left elements-->
+            <div></div>
+            <!--Right elements-->
+            <div class="flex-box">
+                <a href="index.html"><small>Search</small></a>
+                <button type="button" title="Google Apps" class="btn btn-secondary-hover btn-circle"><span class="material-symbols-rounded">apps</span></button>
+                <a href="https://accounts.google.com" class="btn btn-primary btn-pill">Sign in</a>
+            </div>
+        </header>
+
+        <!--Main Section-->
+        <main>
+            <!--Google Logo-->
+            <section>
+                <img src="images/google.png" title="Google" class="brand-img">
+                <span class="fg-primary brand-img-text">images</span>
+            </section>
+
+            <section>
+                <form action="https://www.google.com/search" method="get" id="searchForm" class="flex-box">
+                    <input type="hidden" name="udm" value="2">
+                    <small class="fg-tertiary">
+                        <span class="material-symbols-rounded" style="font-size:1.3rem;">search</span>
+                    </small>
+                    <input type="search" name="q" class="input-search" required />
+                    <button class="btn p-0" title="Search by voice" type="button">
+                        <img src="images/mic.png" alt="Mic" style="width:33px;">
+                    </button>
+                    <button class="btn p-0" title="Search by image" type="button">
+                        <img src="images/lens.png" alt="Image" style="width:25px;">
+                    </button>
+                    <button type="submit" class="fg-primary p-0" style="border:none;background-color: transparent;">
+                        <span class="material-symbols-rounded" style="font-size:1.5rem;">search</span>
+                    </span>
+                </form>
+            </section>
+
+        </main>
+
+        <!--Footer-->
+        <footer>
+            <div style="padding:10px;">
+                India
+            </div>
+            <hr>
+            <div class="flex-box" style="padding:10px;">
+                <div class="flex-box">
+                    <a href="#">About</a>
+                    <a href="#">Advertising</a>
+                    <a href="#">Business</a>
+                    <a href="#">How Search works</a>
+                </div>
+                <div class="flex-box">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <div class="dropup">
+                        <div class="dropup-content" id="dropup">
+                            <a href="#">Search settings</a>
+                            <a href="advance-search.html">Advanced search</a>
+                            <a href="#">Your data in Search</a>
+                            <a href="#">Search history</a>
+                            <a href="#">Search help</a>
+                            <a href="#">Send feedback</a>
+                            <hr>
+                            <a href="#">Dark theme: Off</a>
+                        </div>
+                        <span onclick="toggleDropup()" id="dropBtn">Settings</span>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+
+        <script>
+            function toggleDropup() {
+                document.getElementById('dropup').classList.toggle('d-block');
+            }
+
+            // Close the dropdown menu if the user clicks outside of it
+            window.onclick = (e) => {
+                if (!e.target.matches('#dropBtn')) {
+                    if (document.getElementById('dropup').classList.contains('d-block')) {
+                        document.getElementById('dropup').classList.remove('d-block');
+                    }
+                }
+            }
+        </script>
+    </body>
+
+</html>
